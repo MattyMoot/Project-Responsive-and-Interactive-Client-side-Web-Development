@@ -18,6 +18,11 @@ body {
     background-attachment: fixed;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 body::after{
     background-image:  linear-gradient(to bottom, transparent, #99b9ff);
@@ -151,8 +156,8 @@ li a:hover {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
-  text-align: center;
-  background-color: rgb(155, 190, 243);
+  text-align: left;
+  background-color: rgb(104, 160, 245);
   border-radius: 5px;
 }
 
@@ -160,7 +165,7 @@ li a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: start;
-    background-color: #7D82B8;
+    background-color: rgb(99, 106, 179);
     border-radius: 5px;
     margin-bottom: 10px;
 }
