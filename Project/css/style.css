@@ -19,7 +19,10 @@ body {
     background-attachment: fixed;
 }
 
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 img {
   display: block;
@@ -40,7 +43,9 @@ img {
 
 .row {
   float: left;
-  display: inline-block;
+}
+.top-row {
+  float: left;
 }
 /* Footer style */
 
@@ -49,13 +54,24 @@ img {
   color: aliceblue;
   padding: 10px;
   clear: both;
-  margin-bottom: 8px;
-  margin-top: 15px;
+  margin-bottom: auto;
+  margin-top: 45px;
   position: relative;
   border-radius: 5px;
-  bottom: auto;
+  bottom: 10px;
   float: right;
   height: 50px;
+}
+.footer-thankyou {
+   position: fixed;
+   left: 0;
+   bottom: 3px;
+   width: 100%;
+   background-color: gray;
+  color: aliceblue;
+  padding: 10px;
+  clear: both;
+  border-radius: 8px;
 }
 .author {
   float: right;
@@ -133,7 +149,7 @@ li a:hover {
   box-sizing: border-box;
 }
 
-input[type=text], select, textarea {
+button[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -144,20 +160,30 @@ input[type=text], select, textarea {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  border-radius: 8px;
+  margin-right: 10px;
 }
 
-input[type=submit] {
+button[type=submit] {
   background-color: rgb(0, 247, 255);
   color: rgb(68, 67, 67);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
-  margin-left: 120px;
+  margin-left: 340px;
+}
+button[id="go-back"] {
+  background-color: rgb(0, 247, 255);
+  color: rgb(68, 67, 67);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 700px;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
   background-color: rgba(0, 108, 134, 0.5);
 }
 
@@ -207,11 +233,24 @@ input[type=submit]:hover {
   margin-left: 1110px;
   position: relative;
 }
+.column-thankyou {
+    width: 50%;
+  padding:  10px;
+  margin-left: 670px;
+  margin-top: 300px;
+}
+.column-treks {
+  width: 100%;
+  padding: 0 100px;
+  margin-left: 10px;
+  position: relative;
+}
 
 .column-hikes {
+  width: 100%;
+  padding: 0 100px;
+  margin-left: 10px;
   position: relative;
-  margin-left: auto;
-  margin-top: 200px;
 }
 
 
@@ -221,6 +260,18 @@ input[type=submit]:hover {
   text-align: left;
   background-color: rgb(104, 160, 245);
   border-radius: 5px;
+  width: 350px;
+  margin-left: -110px;
+}
+
+.card-thankyou {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(104, 160, 245);
+  border-radius: 5px;
+  width: 350px;
+  margin-left: -110px;
 }
 
 .banner-card {
@@ -234,7 +285,6 @@ input[type=submit]:hover {
 
 
 /* styling for extra components */
-
 
 
 iframe {
@@ -332,7 +382,7 @@ box-shadow: 4px 4px 14px #000;
   }
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-  .col-25, .col-75, input[type=submit] {
+  .col-25, .col-75, button[type=submit] {
     width: 100%;
     margin-top: 0;
   }
